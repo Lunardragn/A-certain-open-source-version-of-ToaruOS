@@ -13,19 +13,18 @@ There are no external runtime dependencies and all required source code, totalli
 
 ## History
 
-> I have been working on ToaruOS for over a decade now, and my goals have changed over the years.
+> ToaruOS is cool, but what if I mashed Debian i to it to make it work?
+> That's the goal of this fork, nothing more.
+> 
+> 
 >
-> When I first started the project in December 2010, my aim was to "learn by doing" - studying Unix-like systems by making one from scratch.
-> I had been a contributor to Compiz, one of the first widely-used compositing window managers for X11, a few years prior, and somewhat naturally ToaruOS gained a GUI built on similar concepts early on.
+> 
+> 
+> 
 >
-> For its original 1.0 release in 2015, ToaruOS was not the "completely from scratch" OS it has since become.
-> Newlib provided the libc, and the GUI was built on Cairo, libpng, and Freetype.
-> In the middle of 2018, I started a new project to replace these third-party components, which was eventually completed and merged to become ToaruOS 1.6.
->
-> Through out the project, ToaruOS has also attracted quite a few beginner OS developers who have tried to use it as a reference.
-> ToaruOS's kernel, however, was a source of personal embarrassment for me, and in April 2021, after a long hiatus, I began work on a new one.
-> The result was Misaka: a new 64-bit, SMP-enabled kernel. Misaka was merged in May and started the 1.99 series of beta releases leading up to ToaruOS 2.0.
-
+> 
+> 
+> 
 ## Features
 
 - **Dynamically linked userspace** with shared libraries and `dlopen`.
