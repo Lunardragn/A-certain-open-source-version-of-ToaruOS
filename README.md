@@ -13,7 +13,7 @@ There are no external runtime dependencies and all required source code, totalli
 
 ## History
 
-> ToaruOS is cool, but what if I mashed Debian i to it to make it work?
+> ToaruOS is cool, but what if I mashed Debian into it to make it work?
 > That's the goal of this fork, nothing more.
 > 
 > 
