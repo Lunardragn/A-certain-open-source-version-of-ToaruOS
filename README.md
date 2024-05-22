@@ -8,14 +8,16 @@ The OS includes a kernel, bootloader, dynamic shared object linker, C standard l
 
 There are no external runtime dependencies and all required source code, totalling roughly 100k lines of (primarily) C, is included in this repository, save for [Kuroko](https://github.com/kuroko-lang/kuroko), which lives separately.
 
-![Screenshot](https://klange.dev/s/Screenshot%20from%202021-12-06%2011-38-12.png)
-*Demonstration of ToaruOS's UI and some applications.*
+Hey!
+
+That was the original repo, now it's our turn to maintain and improve upon this OS
+
 
 ## History
 
-> ToaruOS is cool, but what if I mashed Debian into it to make it work?
-> That's the goal of this fork, nothing more.
-> 
+> ToaruOS is cool, but what if anyone could expand on it?
+> That's the goal of this fork.
+> All rights go to the original maker of ToaruOS, klange.
 > 
 >
 > 
@@ -180,54 +182,3 @@ You may redistribute code under the NCSA license, as well as make modifications 
 While most of ToaruOS is written entirely by myself, be sure to include other authors where relevant, such as with [Mike's audio subsystem](https://github.com/klange/toaruos/blob/master/kernel/audio/snd.c) or [Dale's string functions](https://github.com/klange/toaruos/blob/master/kernel/misc/string.c).
 
 Some components of ToaruOS, such as [Kuroko](https://github.com/kuroko-lang/kuroko/blob/9f6160092ecece0f2c18b63c066151cbe0ded1bb/LICENSE) or [bim](https://github.com/klange/toaruos/blob/master/apps/bim.c#L3) have different but compatible terms.
-
-## Community
-
-### Mirrors
-
-ToaruOS is regularly mirrored to multiple Git hosting sites.
-
-- Gitlab: [toaruos/toaruos](https://gitlab.com/toaruos/toaruos)
-- GitHub: [klange/toaruos](https://github.com/klange/toaruos)
-- Bitbucket: [klange/toaruos](https://bitbucket.org/klange/toaruos)
-- ToaruOS.org: [klange/toaruos](https://git.toaruos.org/klange/toaruos)
-
-### IRC
-
-`#toaruos` on Libera (`irc.libera.chat`)
-
-## FAQs
-
-### Is ToaruOS self-hosting?
-
-Individual applications and libraries can be built by installing the `build-essential` metapackage from the repository, which will pull in `gcc` and `binutils`.
-Sources are available in the `/src` directory on the live CD in a similar layout to this repository, and the `auto-dep.krk` utility script is also available.
-
-For building ramdisks, finalized kernels, or CD images, some components are currently unavailable.
-In particular, the [build script for ramdisks](util/createramdisk.py) is still written in Python and depends on its `tarfile` module and `zlib` support.
-Previously, with a capable compiler toolchain, ToaruOS 1.x was able to build its own kernel, userspace, libraries, and bootloader, and turn these into a working ISO CD image through a Python script that performed a similar function to the Makefile.
-
-ToaruOS is not currently capable of building most of its ports, due to a lack of a proper POSIX shell and Make implementation. These are eventual goals of the project.
-
-### Is ToaruOS a Linux distribution?
-
-No, not at all. There is no code from Linux anywhere in ToaruOS, nor were Linux sources used as a reference material.
-
-ToaruOS is a completely independent project, and all code in this repository - which is the entire codebase of the operating system, including its kernel, bootloaders, libraries, and applications - is original, written by myself and a handful of contributors over the course of ten years.
-The complete source history, going back to when ToaruOS was nothing more than a baremetal "hello world" can be tracked through this git repository.
-
-### When you say "complete"...
-
-ToaruOS is complete in the sense that it covers the whole range of functionality for an OS: It is not "just a kernel" or "just a userspace".
-
-ToaruOS is _not_ complete in the sense of being "done".
-
-### Is ToaruOS POSIX-compliant?
-
-While I aim to support POSIX interfaces well enough for software to be ported, strict implementation of the standard is not a major goal of the OS, and full compliance may even be undesirable.
-
-### Are contributions accepted?
-
-ToaruOS is a personal project, not a community project. Contributions in the form of code should be discussed in advance. Ports and other work outside of the repo, however, are a great way to help out.
-
-You can also help by contributing to [Kuroko](https://github.com/kuroko-lang/kuroko) - which is part of why it's kept as a separate repository.
